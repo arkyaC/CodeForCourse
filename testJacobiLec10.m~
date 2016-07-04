@@ -1,0 +1,10 @@
+close all;clc;
+xt=0;yt=0;zt=0;
+for i=1:20
+    x=(7+yt-zt)/4
+    y=(21+4*xt+zt)/8
+    z=(15-yt+2*xt)/5
+    if (abs(x-xt)<tol)&&(abs(y-yt)<tol)&&
+    end
+    xt=x;yt=y;zt=z;
+end
