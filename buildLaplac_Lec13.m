@@ -1,5 +1,5 @@
 close all; clc;
-m=10;
+m=5;
 n=m*m;
 
 e1=ones(n,1);
@@ -19,12 +19,9 @@ end
 for j=n:-1:m
     e4(j,1)=e4(j-m+1,1);
 end
-e2
-e5
-%e4(m:n,1)=e3(1:n-m+1,1);e4(1:m-1,1)=e1(1:m-1,1);
 
 A=spdiags([e1 e1 e3 e2 -4*e1 e5 e4 e1 e1],[-(n-m) -m -(m-1) -1 0 1 (m-1) m n-m],n,n);
 
-%det(A)
-%condest(A)
+det(A)
+condest(A)
 spy(A);
