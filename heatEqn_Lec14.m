@@ -41,7 +41,8 @@ for i=1:length(t)
     if i==5
         pause(3);
     end
-    pcolor(reshape(y(i,:),nx,ny));
-    pause(.6);
+    pcolor(reshape(y(i,:),nx,ny));shading interp
+    drawnow
+    pause(.2);
 %     hold on
 end
