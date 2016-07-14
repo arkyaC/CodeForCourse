@@ -7,4 +7,5 @@ psiy=real(ifft2(1i*KY.*psit));
 wx=real(ifft2(1i*KX.*wt));
 wy=real(ifft2(1i*KY.*wt));
 
-rhs= nu*K2.*wt2 + reshape(fft2(wx.*psiy-wy.*psix),n^2,1);
+A=fft2(wx.*psiy-wy.*psix);
+rhs= -nu*K2.*wt2 + reshape(A,n^2,1);
